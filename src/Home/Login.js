@@ -20,8 +20,9 @@ const Login = () => {
     <React.Fragment>
       <div className="login">
         <div className="row">
-          <div className="col-4"></div>
-          <div className="col-4 text-center">
+          <div className="col-lg-4"></div>
+          <div className="col-lg-4 col-12 text-center ">
+          <div className="login-card">
             <img src={logo} alt="binance" className="login-logo" />
             <h2 className="text-white my-3">Admin Login </h2>
             <Form.Control
@@ -43,6 +44,7 @@ const Login = () => {
                 Login
               </button>
             </div>
+          </div>
           </div>
           <div className="col-4"></div>
         </div>

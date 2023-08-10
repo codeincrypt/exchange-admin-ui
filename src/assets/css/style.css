@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lexend:wght@300;400;500;600&display=swap');
+
 body {
   background-color: #15161a;
+  color :#a2a1a3;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 300;
 }
 
 .form-control-dark {
@@ -7,6 +13,7 @@ body {
   background-color: #1e1f24;
   background-clip: padding-box;
   border: 1px solid #15161a00;
+  font-size: 14px;
 }
 .form-control:focus {
   color: #eaebeb;
@@ -14,6 +21,36 @@ body {
   border-color: #80bdff;
   outline: 0;
   box-shadow: inset 0 0 0 transparent;
+}
+
+.bg-dark {
+  background-color: #15161a !important;
+}
+
+.btn-secondary {
+  background-color: #1e1f24 !important;
+  border: 1px solid #15161a00;
+}
+
+.input-group-text {
+  background-color: #1e1f24;
+  border: 1px solid #15161a00;
+}
+
+.sidebar {
+  background-color: #1b1c20;
+  width:5%;
+  z-index: 999;
+  position: fixed;
+  padding: 15px;
+  height: 100vh;
+}
+
+.main {
+  /* width:95%; */
+  margin-left: 5%;
+  width: calc(100% - 5%);
+  padding: 15px;
 }
 
 .content {
@@ -107,7 +144,20 @@ body > iframe[style*='2147483647']{
 }
 
 table > tbody > tr > td {
-  font-size: 15px;
+  font-size: 13px;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  font-size: 13px;
+  border-bottom: 2px solid #1e1f24;
+}
+
+.table td, .table th {
+  padding: 0.75rem;
+  font-size: 13px;
+  vertical-align: top;
+  border-top: 1px solid #1e1f24;
 }
 
 .transparent {
@@ -160,9 +210,51 @@ table > tbody > tr > td {
 
 .login {
   height: 100vh;
-  padding: 150px
+  width: 100%;
+}
+.login-card {
+  margin-top: 200px;
+}
+.login-logo {
+  height: 60px;
 }
 
-.login-logo {
-  width: 60px;
+.header-logo {
+  height: 40px;
 }
+.card {
+  background: #1b1c20;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 2px 2px 4px 2px #0000004a;
+}
+.badge-lg {
+  padding: 4px 7px 4px 7px;
+}
+
+
+
+  .input-elevated {
+    font-size: 13px;
+    line-height: 1.5;
+    border: none;
+    color: #888;
+    background: #1b1c20;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%2720%27 height=%2720%27 viewBox=%270 0 20 20%27><path fill=%27%23838D99%27 d=%27M13.22 14.63a8 8 0 1 1 1.41-1.41l4.29 4.29a1 1 0 1 1-1.41 1.41l-4.29-4.29zm-.66-2.07a6 6 0 1 0-8.49-8.49 6 6 0 0 0 8.49 8.49z%27></path></svg>");
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    background-size: 20px 17px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08);
+    border-radius: 5px;
+    width: 300px;
+    padding: 0.7em 1em 0.7em 3em;
+}
+  
+  .input-elevated::placeholder{
+    color: #999;
+  }
+  
+  .input-elevated:focus {
+    outline: none;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.16);
+  }
