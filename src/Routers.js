@@ -1,10 +1,11 @@
 // Admin Page
-import Dashbord from "./Admin/Dashbord";
+import Dashbord from "./Admin/Dashboard";
 import Profile from "./Admin/Profile";
 import Operations from "./Admin/Operations";
 
 // Home Page
 import Login from "./Home/Login";
+import Users from "./Admin/Users";
 
 export const AdminRouter = [
   {
@@ -30,6 +31,11 @@ export const AdminRouter = [
   {
     path: "/operations",
     component: Operations,
+    exact: true,
+  },
+  {
+    path: "/users",
+    component: Users,
     exact: true,
   },
 ];

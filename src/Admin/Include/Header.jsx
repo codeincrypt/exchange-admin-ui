@@ -12,11 +12,15 @@ const Header = () => {
     navigate("/login");
   };
 
+  const switchMode = () => {
+    
+  }
+
   return (
     <React.Fragment>
       <Navbar className="bg-dark text-white">
           <Navbar.Brand className="text-white" href="/admin">
-            Admin Header
+            Binance Admin Dashboard
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -26,20 +30,20 @@ const Header = () => {
                 <input class="input-elevated" type="text" placeholder="Search" />
               </div>
 
-              <Nav.Link className="p-0 ml-2" to="/dashboard">
-                <button className="btn btn-secondary" onClick={Logout}> <i className="fa fa-sun"></i> </button>
+              <Nav.Link className="p-0 ml-2">
+                <button className="btn btn-secondary" onClick={switchMode}> <i className="fa fa-sun"></i> </button>
               </Nav.Link>
 
-              <Nav.Link className="p-0 ml-2" to="/dashboard">
-                <button className="btn btn-secondary" onClick={Logout}> <i className="fa fa-user"></i> </button>
+              <Nav.Link className="p-0 ml-2" to="/profile">
+                <button className="btn btn-secondary"> <i className="fa fa-user"></i> </button>
               </Nav.Link>
 
-              <Nav.Link className="p-0 ml-2" to="/dashboard">
-                <button className="btn btn-secondary" onClick={Logout}> <i className="fa fa-cog"></i> </button>
+              <Nav.Link className="p-0 ml-2" to="/setting">
+                <button className="btn btn-secondary"> <i className="fa fa-cog"></i> </button>
               </Nav.Link>
 
-              <Nav.Link className="p-0 ml-2" to="/dashboard">
-                <button className="btn btn-secondary" onClick={Logout}> <i className="fa fa-sign-out"></i> </button>
+              <Nav.Link className="p-0 ml-2">
+                <button className="btn btn-secondary" onClick={Logout}> <i className="fa fa-sign-out-alt"></i> </button>
               </Nav.Link>
 
               {/* <Link className="btn btn-secondary btn-sm text-white" to="/dashboard">

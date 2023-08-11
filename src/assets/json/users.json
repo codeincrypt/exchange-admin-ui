@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "userid":"6985",
     "name": "Leanne Graham",
     "username": "Bret",
     "email": "Sincere@april.biz",
@@ -10,10 +11,12 @@
       "city": "Gwenborough",
       "zipcode": "92998-3874"
     },
+    "status":"1",
     "phone": "1-770-736-8031 x56442"
   },
   {
     "id": 2,
+    "userid":"5985",
     "name": "Ervin Howell",
     "username": "Antonette",
     "email": "Shanna@melissa.tv",
@@ -23,10 +26,12 @@
       "city": "Wisokyburgh",
       "zipcode": "90566-7771"
     },
+    "status":"1",
     "phone": "010-692-6593 x09125"
   },
   {
     "id": 3,
+    "userid":"5885",
     "name": "Clementine Bauch",
     "username": "Samantha",
     "email": "Nathan@yesenia.net",
@@ -36,10 +41,12 @@
       "city": "McKenziehaven",
       "zipcode": "59590-4157"
     },
+    "status":"1",
     "phone": "1-463-123-4447"
   },
   {
     "id": 4,
+    "userid":"5786",
     "name": "Patricia Lebsack",
     "username": "Karianne",
     "email": "Julianne.OConner@kory.org",
@@ -49,10 +56,12 @@
       "city": "South Elvis",
       "zipcode": "53919-4257"
     },
+    "status":"1",
     "phone": "493-170-9623 x156"
   },
   {
     "id": 5,
+    "userid":"5736",
     "name": "Chelsey Dietrich",
     "username": "Kamren",
     "email": "Lucio_Hettinger@annie.ca",
@@ -62,10 +71,12 @@
       "city": "Roscoeview",
       "zipcode": "33263"
     },
+    "status":"1",
     "phone": "(254)954-1289"
   },
   {
     "id": 6,
+    "userid":"5698",
     "name": "Mrs. Dennis Schulist",
     "username": "Leopoldo_Corkery",
     "email": "Karley_Dach@jasper.info",
@@ -75,10 +86,12 @@
       "city": "South Christy",
       "zipcode": "23505-1337"
     },
+    "status":"1",
     "phone": "1-477-935-8478 x6430"
   },
   {
     "id": 7,
+    "userid":"5789",
     "name": "Kurtis Weissnat",
     "username": "Elwyn.Skiles",
     "email": "Telly.Hoeger@billy.biz",
@@ -88,10 +101,12 @@
       "city": "Howemouth",
       "zipcode": "58804-1099"
     },
+    "status":"0",
     "phone": "210.067.6132"
   },
   {
     "id": 8,
+    "userid":"4563",
     "name": "Nicholas Runolfsdottir V",
     "username": "Maxime_Nienow",
     "email": "Sherwood@rosamond.me",
@@ -101,10 +116,12 @@
       "city": "Aliyaview",
       "zipcode": "45169"
     },
+    "status":"1",
     "phone": "586.493.6943 x140"
   },
   {
     "id": 9,
+    "userid":"4455",
     "name": "Glenna Reichert",
     "username": "Delphine",
     "email": "Chaim_McDermott@dana.io",
@@ -114,10 +131,12 @@
       "city": "Bartholomebury",
       "zipcode": "76495-3109"
     },
+    "status":"0",
     "phone": "(775)976-6794 x41206"
   },
   {
     "id": 10,
+    "userid":"5598",
     "name": "Clementina DuBuque",
     "username": "Moriah.Stanton",
     "email": "Rey.Padberg@karina.biz",
@@ -127,6 +146,7 @@
       "city": "Lebsackbury",
       "zipcode": "31428-2261"
     },
+    "status":"1",
     "phone": "024-648-3804"
   }
 ]

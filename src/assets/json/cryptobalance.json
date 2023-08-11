@@ -4,7 +4,7 @@
     "currency":"Bitcoin",
     "asset":"BTC",
     "balance":"0.506",
-    "usd":"$15,049",
+    "usd":"$ 15,049",
     "address":"bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
     "customer":"24"
   },
@@ -13,7 +13,7 @@
     "currency":"Ethereum",
     "asset":"ETH",
     "balance":"1.4365",
-    "usd":"$2,563",
+    "usd":"$ 2,563",
     "address":"0xcbd6832ebc203e49e2b771897067fce3c58575ac",
     "customer":"75"
   },
@@ -22,7 +22,7 @@
     "currency":"Litecoin",
     "asset":"LTC",
     "balance":"156.95",
-    "usd":"$163",
+    "usd":"$ 163",
     "address":"ltc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
     "customer":"56"
   },
@@ -31,7 +31,7 @@
     "currency":"Solana",
     "asset":"SOL",
     "balance":"4513",
-    "usd":"$5513",
+    "usd":"$ 5,513",
     "address":"EKa52U93bEVLsuz7WUVyJ3xrr84umnqa33oYojkUZFpX",
     "customer":"114"
   },
@@ -40,8 +40,17 @@
     "currency":"BNB",
     "asset":"BNB",
     "balance":"165",
-    "usd":"$165",
+    "usd":"$ 165",
     "address":"0xcbd6832ebc203e49e2b771897067fce3cc57ba58",
     "customer":"315"
+  },
+  {
+    "id":6,
+    "currency":"Cardano",
+    "asset":"ADA",
+    "balance":"15665",
+    "usd":"$ 6,521",
+    "address":"addr1zxn9efv2f6w82hagxqtn62ju4m293tqvw0uhmdl64ch8uw6j2c79gy9l76sdg0xwhd7r0c0kna0tycz4y5s6mlenh8pq6s3z70",
+    "customer":"198"
   }
 ]
