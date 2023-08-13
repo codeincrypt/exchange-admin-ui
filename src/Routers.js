@@ -6,6 +6,8 @@ import Operations from "./Admin/Operations";
 // Home Page
 import Login from "./Home/Login";
 import Users from "./Admin/Users";
+import SendReceive from "./Admin/SendReceive";
+import Pagenotfound from "./Admin/PageNotFound";
 
 export const AdminRouter = [
   {
@@ -36,6 +38,16 @@ export const AdminRouter = [
   {
     path: "/users",
     component: Users,
+    exact: true,
+  },
+  {
+    path: "/send-receive",
+    component: SendReceive,
+    exact: true,
+  },
+  {
+    path: "*",
+    component: Pagenotfound,
     exact: true,
   },
 ];

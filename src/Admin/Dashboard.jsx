@@ -1,5 +1,5 @@
 import React from "react";
-import cryptopaymenthistory from "../assets/json/cryptopaymenthistory.json";
+import cryptosendreceive from "../assets/json/cryptosendreceive.json";
 import cryptobalance from "../assets/json/cryptobalance.json";
 import { Link } from "react-router-dom";
 
@@ -76,7 +76,7 @@ const Dashbord = () => {
                 </tr>
               </thead>
               <tbody>
-                {cryptopaymenthistory.map((item, index) => (
+                {cryptosendreceive.map((item, index) => (
                   <tr>
                     <th>{item.userid}</th>
                     <td>{item.name}</td>
@@ -96,7 +96,7 @@ const Dashbord = () => {
                     <td className="text-center">{item.date}</td>
                     <td className="text-center">
                       <Link
-                        to={`paymenthistory/${item.id}`}
+                        to={`payment-history/${item.id}`}
                         className="btn btn-sm btn-secondary"
                       >
                         View
@@ -138,7 +138,7 @@ const Dashbord = () => {
                 </tr>
               </thead>
               <tbody>
-                {cryptopaymenthistory.map((item, index) => (
+                {cryptosendreceive.map((item, index) => (
                   <tr>
                     <td>{item.transactionid}</td>
                     <td>{item.name} <br />
@@ -159,7 +159,7 @@ const Dashbord = () => {
                     </td>
                     <td className="text-center">{item.date}</td>
                     <td className="text-center">
-                      <Link to={`paymenthistory/${item.id}`} className="btn btn-sm btn-secondary" >
+                      <Link to={`send-receive/${item.id}`} className="btn btn-sm btn-secondary" >
                         View
                       </Link>
                     </td>

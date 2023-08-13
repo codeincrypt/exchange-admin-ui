@@ -1,5 +1,5 @@
 import React from "react";
-import cryptopaymenthistory from "../assets/json/cryptopaymenthistory.json"
+import cryptosendreceive from "../assets/json/cryptosendreceive.json"
 import { Link } from "react-router-dom";
 
 const Operations = () => {
@@ -19,7 +19,7 @@ const Operations = () => {
                 </tr>
               </thead>
               <tbody>
-                {cryptopaymenthistory.map((item, index) => (
+                {cryptosendreceive.map((item, index) => (
                   <tr>
                     <th>{item.userid}</th>
                     <td>{item.name}</td>

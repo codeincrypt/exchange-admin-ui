@@ -19,13 +19,13 @@ const Users = () => {
                     Email
                   </th>
                   <th scope="col" className="text-uppercase">
-                    Amount
+                    Phone
+                  </th>
+                  <th scope="col" className="text-uppercase text-center">
+                    KYC
                   </th>
                   <th scope="col" className="text-uppercase text-center">
                     Status
-                  </th>
-                  <th scope="col" className="text-uppercase text-center">
-                    Date & Time
                   </th>
                   <th scope="col" className="text-uppercase text-center">
                     Action
@@ -38,21 +38,27 @@ const Users = () => {
                     <td>{item.userid}</td>
                     <td>{item.name} </td>
                     <td>{item.email}</td>
-                    <td className="text-center">{item.amount}</td>
+                    <td>{item.phone}</td>
                     <td className="text-center">
-                      <span
-                        className={`text-center badge badge-lg ${
-                          item.type === "1"
-                            ? "badge-success"
-                            : "badge-danger"
-                        }`}
-                      >
-                        {item.type}
-                      </span>
+                      {item.kyc === "1" ? (
+                        <span className="badge-warning badge badge-lg">Tier 1</span>
+                      ) : item.kyc === "2" ? (
+                        <span className="badge-warning badge badge-lg">Tier 2</span>
+                      ): item.kyc === "3" ? (
+                        <span className="badge-success badge badge-lg">Verified</span>
+                      ) : (
+                        <span className="badge-danger badge badge-lg">No KYC</span>
+                      )}
                     </td>
-                    <td className="text-center">{item.date}</td>
                     <td className="text-center">
-                      <Link to={`paymenthistory/${item.id}`} className="btn btn-sm btn-secondary" >
+                      {item.status === "1" ? (
+                        <span className="badge-success badge badge-lg">Active</span>
+                      ) : (
+                        <span className="badge-danger badge badge-lg">Blocked</span>
+                      )}
+                    </td>
+                    <td className="text-center">
+                      <Link to={`/users/${item.id}`} className="btn btn-sm btn-secondary" >
                         View
                       </Link>
                     </td>
