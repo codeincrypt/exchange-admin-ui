@@ -3,7 +3,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { UserContext } from "../../App";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 const Header = () => {
   const { dispatch } = useContext(UserContext);
   let navigate = useNavigate();
@@ -19,7 +18,7 @@ const Header = () => {
   return (
     <React.Fragment>
       <Navbar className="bg-dark text-white">
-          <Navbar.Brand className="text-white" href="/admin">
+          <Navbar.Brand className="text-white">
             Binance Admin Dashboard
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -46,9 +45,6 @@ const Header = () => {
                 <button className="btn btn-secondary" onClick={Logout}> <i className="fa fa-sign-out-alt"></i> </button>
               </Nav.Link>
 
-              {/* <Link className="btn btn-secondary btn-sm text-white" to="/dashboard">
-                <i className="fa fa-user"></i>
-              </Link> */}
             </Nav>
           </Navbar.Collapse>
       </Navbar>

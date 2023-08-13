@@ -24,7 +24,7 @@ const Dashbord = () => {
       <div className="row mb-4">
         <div className="col-lg-9">
           <div className="row">
-            {cryptobalance.map((item, index) => (
+            {cryptobalance.slice(0,5).map((item, index) => (
               <div className="col-lg-2">
                 <div className="card p-3">
                   <h6>
@@ -138,7 +138,7 @@ const Dashbord = () => {
                 </tr>
               </thead>
               <tbody>
-                {cryptosendreceive.map((item, index) => (
+                {cryptosendreceive.slice(0,5).map((item, index) => (
                   <tr>
                     <td>{item.transactionid}</td>
                     <td>{item.name} <br />

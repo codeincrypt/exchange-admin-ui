@@ -1,0 +1,74 @@
+[
+  {
+    "id":1,
+    "transactionid":198756,
+    "name":"Amit Sah",
+    "userid":"1002",
+    "pair":"LTC-USD",
+    "quantity":"5",
+    "price":"$ 85.42",
+    "amount":"$ 427.1",
+    "type":"BUY",
+    "date":"25/12/2022"
+  },
+  {
+    "id":2,
+    "transactionid":208756,
+    "name":"Bikash roy",
+    "userid":"1523",
+    "pair":"XRP-USD",
+    "quantity":"5",
+    "price":"$ 0.63567",
+    "amount":"$ 3.18",
+    "type":"SELL",
+    "date":"18/12/2022"
+  },
+  {
+    "id":3,
+    "transactionid":208766,
+    "name":"Prashant Kapoor",
+    "userid":"1634",
+    "pair":"BTC-USD",
+    "quantity":"0.001",
+    "price":"$ 29480",
+    "amount":"$ 29",
+    "type":"SELL",
+    "date":"14/12/2022"
+  },
+  {
+    "id":4,
+    "transactionid":208766,
+    "name":"Aftab",
+    "userid":"5698",
+    "pair":"SOL-USD",
+    "quantity":"112",
+    "price":"$ 24.76",
+    "amount":"$ 2774.12",
+    "type":"BUY",
+    "date":"01/05/2023"
+  },
+  {
+    "id":5,
+    "transactionid":207756,
+    "name":"Zoya Singh",
+    "userid":"1634",
+    "pair":"ETH-USD",
+    "quantity":"0.47",
+    "price":"$ 1855",
+    "amount":"$ 872.04",
+    "type":"BUY",
+    "date":"05/01/2023"
+  },
+  {
+    "id":6,
+    "transactionid":208766,
+    "name":"Lalit rana",
+    "userid":"1634",
+    "pair":"SOL-USD",
+    "quantity":"5",
+    "price":"$ 24.76",
+    "amount":"$ 1609.9",
+    "type":"SELL",
+    "date":"01/05/2023"
+  }
+]

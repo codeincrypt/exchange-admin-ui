@@ -1,8 +1,8 @@
 import React from "react";
-import cryptosendreceive from "../assets/json/cryptosendreceive.json";
+import buysellhistory from "../assets/json/buysellhistory.json";
 import { Link } from "react-router-dom";
 
-const SendReceive = () => {
+const BuySell = () => {
   return (
     <div className="col-lg-12">
       <div className="row">
@@ -14,8 +14,8 @@ const SendReceive = () => {
         <div className="col-lg-3"> </div>
         <div className="col-lg-2">
           <select className="form-control-dark form-control">
-            <option>Send</option>
-            <option>Receive</option>
+            <option>Buy</option>
+            <option>Sell</option>
           </select>
         </div>
         <div className="col-lg-2">
@@ -44,19 +44,16 @@ const SendReceive = () => {
                     Name
                   </th>
                   <th scope="col" className="text-uppercase text-center">
-                    Assets
+                    Pair
                   </th>
                   <th scope="col" className="text-uppercase text-center">
-                    Sender Address
+                    Price
                   </th>
                   <th scope="col" className="text-uppercase text-center">
-                    Receiver Address
+                    Qty.
                   </th>
                   <th scope="col" className="text-uppercase text-center">
                     Amount
-                  </th>
-                  <th scope="col" className="text-uppercase text-center">
-                    Txn Hash
                   </th>
                   <th scope="col" className="text-uppercase text-center">
                     Type
@@ -70,26 +67,21 @@ const SendReceive = () => {
                 </tr>
               </thead>
               <tbody>
-                {cryptosendreceive.map((item, index) => (
+                {buysellhistory.map((item, index) => (
                   <tr>
                     <td>{item.transactionid}</td>
                     <td>
                       {item.name} <br />
                       {item.userid}
                     </td>
-                    <td className="text-center">{item.assets}</td>
-                    <td className="text-center" title={item.sender}>{item.sender.substring(0, 5)}.....{item.sender.substring(20, 30)}</td>
-                    <td className="text-center" title={item.receiver}>{item.receiver.substring(0, 5)}.....{item.receiver.substring(20, 30)}</td>
+                    <td className="text-center">{item.pair}</td>
+                    <td className="text-center">{item.price}</td>
+                    <td className="text-center">{item.quantity}</td>
                     <td className="text-center">{item.amount}</td>
-                    <td className="text-center">
-                      {item.txnhash.substring(0, 5)}.....
-                      {item.txnhash.substring(30, 40)}
-                    </td>
-                    {/* <td className="text-center">{item.txnhash}</td> */}
                     <td className="text-center">
                       <span
                         className={`text-center badge badge-lg ${
-                          item.type === "RECEIVE"
+                          item.type === "BUY"
                             ? "badge-success"
                             : "badge-danger"
                         }`}
@@ -100,7 +92,7 @@ const SendReceive = () => {
                     <td className="text-center">{item.date}</td>
                     <td className="text-center">
                       <Link
-                        to={`/send-receive/${item.transactionid}`}
+                        to={`/buy-sell/${item.transactionid}`}
                         className="btn btn-sm btn-secondary"
                       >
                         View
@@ -117,4 +109,4 @@ const SendReceive = () => {
   );
 };
 
-export default SendReceive;
+export default BuySell;
