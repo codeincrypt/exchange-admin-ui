@@ -1,7 +1,8 @@
 import React from "react";
-import cryptosendreceive from "../assets/json/cryptosendreceive.json";
+import buysellhistory from "../assets/json/buysellhistory.json";
+import { Link } from "react-router-dom";
 
-const Operations = () => {
+const Fiat = () => {
   return (
     <div className="col-lg-12">
       <div className="row">
@@ -13,18 +14,16 @@ const Operations = () => {
         <div className="col-lg-3"> </div>
         <div className="col-lg-2">
           <select className="form-control-dark form-control">
-            <option>Pending</option>
-            <option>Approved</option>
-            <option>Reject</option>
+            <option>Deposit</option>
+            <option>Withdrawal</option>
           </select>
         </div>
         <div className="col-lg-2">
           <select className="form-control-dark form-control">
-            <option>BTC</option>
-            <option>LTC</option>
-            <option>ETH</option>
-            <option>SOL</option>
-            <option>BNB</option>
+            <option>INR</option>
+            <option>USD</option>
+            <option>AED</option>
+            <option>EURO</option>
           </select>
         </div>
         <div className="col-lg-1">
@@ -44,13 +43,13 @@ const Operations = () => {
                     Name
                   </th>
                   <th scope="col" className="text-uppercase text-center">
-                    Assets
+                    Pair
                   </th>
                   <th scope="col" className="text-uppercase text-center">
-                    Sender Address
+                    Price
                   </th>
                   <th scope="col" className="text-uppercase text-center">
-                    Receiver Address
+                    Qty.
                   </th>
                   <th scope="col" className="text-uppercase text-center">
                     Amount
@@ -67,20 +66,21 @@ const Operations = () => {
                 </tr>
               </thead>
               <tbody>
-                {cryptosendreceive.map((item, index) => (
+                {buysellhistory.map((item, index) => (
                   <tr>
                     <td>{item.transactionid}</td>
                     <td>
                       {item.name} <br />
                       {item.userid}
                     </td>
-                    <td className="text-center">{item.assets}</td>
-                    <td className="text-center" title={item.sender}>{item.sender.substring(0, 5)}.....{item.sender.substring(20, 30)}</td>
-                    <td className="text-center" title={item.receiver}>{item.receiver.substring(0, 5)}.....{item.receiver.substring(20, 30)}</td>
+                    <td className="text-center">{item.pair}</td>
+                    <td className="text-center">{item.price}</td>
+                    <td className="text-center">{item.quantity}</td>
                     <td className="text-center">{item.amount}</td>
                     <td className="text-center">
-                      <span className={`text-center badge badge-lg ${
-                          item.type === "RECEIVE"
+                      <span
+                        className={`text-center badge badge-lg ${
+                          item.type === "BUY"
                             ? "badge-success"
                             : "badge-danger"
                         }`}
@@ -90,8 +90,12 @@ const Operations = () => {
                     </td>
                     <td className="text-center">{item.date}</td>
                     <td className="text-center">
-                      <button className="btn btn-success btn-sm"> Approve </button>
-                      <button className="btn btn-danger btn-sm"> Reject </button>
+                      <Link
+                        to={`/buy-sell/${item.transactionid}`}
+                        className="btn btn-sm btn-secondary"
+                      >
+                        View
+                      </Link>
                     </td>
                   </tr>
                 ))}
@@ -104,4 +108,4 @@ const Operations = () => {
   );
 };
 
-export default Operations;
+export default Fiat;

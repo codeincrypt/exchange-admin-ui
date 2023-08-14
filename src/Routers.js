@@ -9,6 +9,7 @@ import Users from "./Admin/Users";
 import SendReceive from "./Admin/SendReceive";
 import Pagenotfound from "./Admin/PageNotFound";
 import BuySell from "./Admin/BuySell";
+import Fiat from "./Admin/Fiat";
 
 export const AdminRouter = [
   {
@@ -49,6 +50,11 @@ export const AdminRouter = [
   {
     path: "/buy-sell",
     component: BuySell,
+    exact: true,
+  },
+  {
+    path: "/fiat",
+    component: Fiat,
     exact: true,
   },
   {

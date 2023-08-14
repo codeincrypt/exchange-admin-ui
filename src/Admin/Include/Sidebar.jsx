@@ -7,6 +7,7 @@ import { FiUsers } from 'react-icons/fi';
 import { BsWallet } from 'react-icons/bs';
 import { PiContactlessPayment } from 'react-icons/pi';
 import { RiFolderHistoryLine } from 'react-icons/ri';
+import { FaMoneyBillAlt } from 'react-icons/fa';
 
 const Sidebar = () => {
   return (
@@ -18,9 +19,11 @@ const Sidebar = () => {
       <ul class="sidebar-list mt-4">
         <Link className='sidebar-list-item' to="/dashboard" title="Dashboard" ><AiOutlineDashboard /></Link>
         <Link className='sidebar-list-item' to="/users" title="Users" ><FiUsers /></Link>
+        <Link className='sidebar-list-item' to="/operations" title="Send Operations" ><FaMoneyBillAlt /></Link>
         <Link className='sidebar-list-item' to="/payment-history" title="Payment History" ><BsWallet /></Link>
         <Link className='sidebar-list-item' to="/send-receive" title="Send Receive" ><RiFolderHistoryLine /></Link>
         <Link className='sidebar-list-item' to="/buy-sell" title="Buy Sell" ><PiContactlessPayment /></Link>
+        {/* <Link className='sidebar-list-item' to="/fiat" title="Fiat Deposi & Withdrawal" ><LiaMoneyBillAltSolid /></Link> */}
       </ul>
     </sidebar>
   )
