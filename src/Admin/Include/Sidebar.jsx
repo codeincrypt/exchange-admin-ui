@@ -1,4 +1,4 @@
-import React from 'react'
+// import { useLocation } from 'react-router';
 import logo from "../../assets/images/icon-logo.png";
 import { Link } from 'react-router-dom';
 
@@ -8,8 +8,13 @@ import { BsWallet } from 'react-icons/bs';
 import { PiContactlessPayment } from 'react-icons/pi';
 import { RiFolderHistoryLine } from 'react-icons/ri';
 import { FaMoneyBillAlt } from 'react-icons/fa';
+import { LiaMoneyBillAltSolid, LiaCogSolid } from 'react-icons/lia';
 
-const Sidebar = () => {
+
+const Sidebar = (props) => {
+  // const location = useLocation();
+  // console.log(location.pathname);
+
   return (
     <sidebar className="sidebar">
       <div className='text-center mt-3'>
@@ -23,7 +28,8 @@ const Sidebar = () => {
         <Link className='sidebar-list-item' to="/payment-history" title="Payment History" ><BsWallet /></Link>
         <Link className='sidebar-list-item' to="/send-receive" title="Send Receive" ><RiFolderHistoryLine /></Link>
         <Link className='sidebar-list-item' to="/buy-sell" title="Buy Sell" ><PiContactlessPayment /></Link>
-        {/* <Link className='sidebar-list-item' to="/fiat" title="Fiat Deposi & Withdrawal" ><LiaMoneyBillAltSolid /></Link> */}
+        <Link className='sidebar-list-item' to="/fiat" title="Fiat Deposi & Withdrawal" ><LiaMoneyBillAltSolid /></Link>
+        <Link className='sidebar-list-item' to="/setting" title="Setting" ><LiaCogSolid /></Link>
       </ul>
     </sidebar>
   )

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "name": "INR",
+    "value": "80"
+  },
+  {
+    "id": "2",
+    "name": "USD",
+    "value": "1"
+  },
+  {
+    "id": "3",
+    "name": "BTC",
+    "value": "28978"
+  },
+  {
+    "id": "4",
+    "name": "ETH",
+    "value": "1877"
+  },
+  {
+    "id": "5",
+    "name": "SOL",
+    "value": "6.2"
+  },
+  {
+    "id": "6",
+    "name": "XRP",
+    "value": "0.6"
+  }
+]

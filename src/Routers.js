@@ -10,6 +10,9 @@ import SendReceive from "./Admin/SendReceive";
 import Pagenotfound from "./Admin/PageNotFound";
 import BuySell from "./Admin/BuySell";
 import Fiat from "./Admin/Fiat";
+import Setting from "./Admin/Setting";
+import ChangePassword from "./Admin/Setting/ChangePassword";
+import CryptoCoins from "./Admin/Setting/CryptoCoins";
 
 export const AdminRouter = [
   {
@@ -55,6 +58,21 @@ export const AdminRouter = [
   {
     path: "/fiat",
     component: Fiat,
+    exact: true,
+  },
+  {
+    path: "/setting",
+    component: Setting,
+    exact: true,
+  },
+  {
+    path: "/setting/crypto-coins",
+    component: CryptoCoins,
+    exact: true,
+  },
+  {
+    path: "/setting/change-password",
+    component: ChangePassword,
     exact: true,
   },
   {

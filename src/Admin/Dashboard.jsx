@@ -1,7 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+import CurrencyExchange from "./Components/Exchange";
+
 import cryptosendreceive from "../assets/json/cryptosendreceive.json";
 import cryptobalance from "../assets/json/cryptobalance.json";
-import { Link } from "react-router-dom";
+import currency from "../assets/json/currency.json";
 
 const Dashbord = () => {
   return (
@@ -42,10 +46,11 @@ const Dashbord = () => {
             ))}
           </div>
         </div>
-
         <div className="col-lg-3">
+          <CurrencyExchange from={currency} to={currency} />
         </div>
       </div>
+
       <div className="row">
         <div className="col-lg-6">
           <div className="card">
@@ -108,7 +113,6 @@ const Dashbord = () => {
             </table>
           </div>
         </div>
-
         <div className="col-lg-6">
           <div className="card">
             <table class="table table-sm">
