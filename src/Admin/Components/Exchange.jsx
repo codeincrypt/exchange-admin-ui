@@ -3,8 +3,8 @@ import InputGroup from "react-bootstrap/InputGroup";
 const CurrencyExchange = ({ from, to }) => {
   return (
     <>
-      <h2 className="text-right">0.005 ETH</h2>
-      <h2 className="text-right">1 USD</h2>
+      <h2 className="text-right">0.4 MYTOKEN</h2>
+      {/* <h2 className="text-right">1 USD</h2> */}
       <InputGroup className="mb-3">
         <input className="form-control form-control-lg form-control-dark" value="80" type="number" />
         <select className="form-control form-control-lg form-control-dark">

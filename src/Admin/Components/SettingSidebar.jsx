@@ -20,7 +20,7 @@ const SettingSidebar = () => {
   return (
     <ListGroup className="card">
       <Link to="/setting/crypto-coins">
-        <ListGroup.Item className="list-group-item-dark">
+        <ListGroup.Item className={`list-group-item-dark ${location.pathname === '/setting/crypto-coins' ? 'active' : ''} ${location.pathname === '/setting' ? 'active' : ''} ${location.pathname === '/setting/' ? 'active' : ''}`}>
           <FaCoins className="mr-2" /> Crypto Coins
         </ListGroup.Item>
       </Link>
@@ -45,7 +45,7 @@ const SettingSidebar = () => {
         </ListGroup.Item>
       </Link>
       <Link to="/setting/admin">
-        <ListGroup.Item className="list-group-item-dark">
+        <ListGroup.Item className={`list-group-item-dark ${location.pathname === '/setting/admin' ? 'active' : ''}`}>
           <LiaUserCheckSolid className="mr-2" /> Admin
         </ListGroup.Item>
       </Link>
@@ -54,13 +54,13 @@ const SettingSidebar = () => {
           <LiaUserCircleSolid className="mr-2" /> Moderators
         </ListGroup.Item>
       </Link>
-      <Link to="/setting/2fa">
-        <ListGroup.Item className="list-group-item-dark">
+      <Link to="/setting/two-factor-authentication" >
+        <ListGroup.Item className={`list-group-item-dark ${location.pathname === '/setting/two-factor-authentication' ? 'active' : ''}`}>
           <MdSecurity className="mr-2" /> 2 Factor Authentication
         </ListGroup.Item>
       </Link>
       <Link to="/setting/change-password">
-        <ListGroup.Item className="list-group-item-dark">
+        <ListGroup.Item className={`list-group-item-dark ${location.pathname === '/setting/change-password' ? 'active' : ''}`}>
           <PiPasswordBold className="mr-2" /> Change Password
         </ListGroup.Item>
       </Link>

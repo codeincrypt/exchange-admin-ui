@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "userid":"1153",
+    "name": "John Doe",
+    "email": "johndoe@exchange.com",
+    "address": {
+      "street": "Hoeger Mall",
+      "suite": "Apt. 692",
+      "city": "South Elvis",
+      "zipcode": "53919-4257"
+    },
+    "status":"1",
+    "type":"ADMIN",
+    "session":"Active",
+    "loggedin":"17-Aug 2023 01:05:56",
+    "phone": "9547896541"
+  },
+  {
+    "id": 2,
+    "userid":"1956",
+    "name": "Ramsey Josh",
+    "email": "ramsey@exchange.com",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263"
+    },
+    "status":"1",
+    "type":"SUPERADMIN",
+    "session":"Active",
+    "loggedin":"17-Aug 2023 01:05:56",
+    "phone": "9896547541"
+  },
+  {
+    "id": 3,
+    "userid":"1675",
+    "name": "Kieren Joe",
+    "email": "kieren@exchange.com",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263"
+    },
+    "status":"2",
+    "type":"SUPERADMIN",
+    "session":"Inactive",
+    "loggedin":"10-Aug 2023 01:05:56",
+    "phone": "9965475841"
+  }
+]

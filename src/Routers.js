@@ -10,9 +10,10 @@ import SendReceive from "./Admin/SendReceive";
 import Pagenotfound from "./Admin/PageNotFound";
 import BuySell from "./Admin/BuySell";
 import Fiat from "./Admin/Fiat";
-import Setting from "./Admin/Setting";
 import ChangePassword from "./Admin/Setting/ChangePassword";
 import CryptoCoins from "./Admin/Setting/CryptoCoins";
+import TwoFA from "./Admin/Setting/TwoFA";
+import AdminSetting from "./Admin/Setting/AdminSetting";
 
 export const AdminRouter = [
   {
@@ -62,7 +63,7 @@ export const AdminRouter = [
   },
   {
     path: "/setting",
-    component: Setting,
+    component: CryptoCoins,
     exact: true,
   },
   {
@@ -71,8 +72,18 @@ export const AdminRouter = [
     exact: true,
   },
   {
+    path: "/setting/admin",
+    component: AdminSetting,
+    exact: true,
+  },
+  {
     path: "/setting/change-password",
     component: ChangePassword,
+    exact: true,
+  },
+  {
+    path: "/setting/two-factor-authentication",
+    component: TwoFA,
     exact: true,
   },
   {

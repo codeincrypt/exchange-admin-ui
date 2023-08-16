@@ -4,12 +4,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import { UserContext } from "../../App";
 import { useNavigate } from "react-router-dom";
 const Header = () => {
+  // eslint-disable-next-line
   const { dispatch } = useContext(UserContext);
   let navigate = useNavigate();
 
-  const Logout = () => {
-    navigate("/login");
-  };
+  const Logout = () => navigate("/login")
+  const redirect = e => navigate(e)
 
   const switchMode = () => {
     
@@ -33,12 +33,12 @@ const Header = () => {
                 <button className="btn btn-secondary" onClick={switchMode}> <i className="fa fa-sun"></i> </button>
               </Nav.Link>
 
-              <Nav.Link className="p-0 ml-2" to="/profile">
-                <button className="btn btn-secondary"> <i className="fa fa-user"></i> </button>
+              <Nav.Link className="p-0 ml-2">
+                <button className="btn btn-secondary" onClick={(e) => redirect("/profile")}> <i className="fa fa-user"></i> </button>
               </Nav.Link>
 
-              <Nav.Link className="p-0 ml-2" to="/setting">
-                <button className="btn btn-secondary"> <i className="fa fa-cog"></i> </button>
+              <Nav.Link className="p-0 ml-2" >
+                <button className="btn btn-secondary" onClick={(e) => redirect("/setting")}> <i className="fa fa-cog"></i> </button>
               </Nav.Link>
 
               <Nav.Link className="p-0 ml-2">

@@ -47,7 +47,9 @@ const Dashbord = () => {
           </div>
         </div>
         <div className="col-lg-3">
+        <div className="card p-3">
           <CurrencyExchange from={currency} to={currency} />
+        </div>
         </div>
       </div>
 
