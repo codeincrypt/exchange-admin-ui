@@ -320,3 +320,14 @@ label {
   line-height: 1.5;
   border-radius: 0.2rem;
 }
+
+.dark-mode .page-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #ddd;
+  background-color: #222;
+  border: 1px solid #111;
+}

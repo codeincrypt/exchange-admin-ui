@@ -1,6 +1,8 @@
 import React from "react";
 import SettingSidebar from "../Components/SettingSidebar";
 
+import qrcode from "../../assets/images/qrcode_73015098_ae5ae7e300c340a6cc948816a6742bda.png";
+
 const TwoFA = () => {
   return (
     <div className="col-lg-12">
@@ -20,6 +22,18 @@ const TwoFA = () => {
 
                 <p className="text-center">Download and install application for your device</p>
 
+                <p className="text-center">Once you scanned the barcode, enter the 6 digit code below : </p>
+
+                <div class="form-group">
+                  <label for="vcode">Verification Code</label>
+                  <input className="form-control form-control-lg form-control-dark" id="vcode" name="vcode" type="number" />
+                </div>
+
+                <div class="form-group">
+                  <button type="button" className="btn btn-warning">
+                    Enable 2FA
+                  </button>
+                </div>
               </div>
               <div className="col-lg-2"></div>
             </div>

@@ -1,14 +1,31 @@
-import React from "react";
-import buysellhistory from "../assets/json/buysellhistory.json";
+import React, { useState } from "react";
+import fiat from "../assets/json/fiat.json";
 import { Link } from "react-router-dom";
 
 const Fiat = () => {
+  const [datalist, setDatalist] = useState(fiat)
+  const [datalistbackup] = useState(fiat)
+
+  const onChangeSearch = (e) => {
+    var searchString = e.toString().toLowerCase();
+    const result = datalistbackup.filter((item) => {
+      return (
+        item.name.toLowerCase().match(searchString) ||
+        item.orderid.toLowerCase().match(searchString) ||
+        item.amount.toLowerCase().match(searchString) ||
+        item.currency.toLowerCase().match(searchString) ||
+        item.senderbank.toLowerCase().match(searchString)
+      );
+    });
+    setDatalist(result)
+  };
+
   return (
     <div className="col-lg-12">
       <div className="row">
         <div className="col-lg-4">
           <div class="search mb-3">
-            <input class="input-elevated" type="text" placeholder="Search" />
+            <input class="input-elevated" type="text" placeholder="Search" onChange={(e) => onChangeSearch(e.target.value)} />
           </div>
         </div>
         <div className="col-lg-3"> </div>
@@ -43,16 +60,16 @@ const Fiat = () => {
                     Name
                   </th>
                   <th scope="col" className="text-uppercase text-center">
-                    Pair
-                  </th>
-                  <th scope="col" className="text-uppercase text-center">
-                    Price
-                  </th>
-                  <th scope="col" className="text-uppercase text-center">
-                    Qty.
-                  </th>
-                  <th scope="col" className="text-uppercase text-center">
                     Amount
+                  </th>
+                  <th scope="col" className="text-uppercase text-center">
+                    Bank Name
+                  </th>
+                  <th scope="col" className="text-uppercase text-center">
+                    Bank Account
+                  </th>
+                  <th scope="col" className="text-uppercase text-center">
+                    Beneficiary Name
                   </th>
                   <th scope="col" className="text-uppercase text-center">
                     Type
@@ -66,21 +83,20 @@ const Fiat = () => {
                 </tr>
               </thead>
               <tbody>
-                {buysellhistory.map((item, index) => (
+                {datalist.map((item, index) => (
                   <tr>
-                    <td>{item.transactionid}</td>
+                    <td>{item.orderid}</td>
                     <td>
                       {item.name} <br />
                       {item.userid}
                     </td>
-                    <td className="text-center">{item.pair}</td>
-                    <td className="text-center">{item.price}</td>
-                    <td className="text-center">{item.quantity}</td>
                     <td className="text-center">{item.amount}</td>
+                    <td className="text-center">{item.senderbank}</td>
+                    <td className="text-center">{item.senderbankac}</td>
+                    <td className="text-center">{item.senderbeneficiary}</td>
                     <td className="text-center">
-                      <span
-                        className={`text-center badge badge-lg ${
-                          item.type === "BUY"
+                      <span className={`text-center badge badge-lg ${
+                          item.type === "DEPOSIT"
                             ? "badge-success"
                             : "badge-danger"
                         }`}
@@ -91,7 +107,7 @@ const Fiat = () => {
                     <td className="text-center">{item.date}</td>
                     <td className="text-center">
                       <Link
-                        to={`/buy-sell/${item.transactionid}`}
+                        to={`/buy-sell/${item.orderid}`}
                         className="btn btn-sm btn-secondary"
                       >
                         View
@@ -101,6 +117,18 @@ const Fiat = () => {
                 ))}
               </tbody>
             </table>
+
+            <div className="pl-3">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item"><button class="page-link">Previous</button></li>
+                  <li class="page-item"><button class="page-link">1</button></li>
+                  <li class="page-item"><button class="page-link">2</button></li>
+                  <li class="page-item"><button class="page-link">3</button></li>
+                  <li class="page-item"><button class="page-link">Next</button></li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
