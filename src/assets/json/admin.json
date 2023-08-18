@@ -6,7 +6,7 @@
     "email": "johndoe@exchange.com",
     "address": {
       "street": "Hoeger Mall",
-      "suite": "Apt. 692",
+      "district": "Apt. 692",
       "city": "South Elvis",
       "zipcode": "53919-4257"
     },
@@ -23,7 +23,7 @@
     "email": "ramsey@exchange.com",
     "address": {
       "street": "Skiles Walks",
-      "suite": "Suite 351",
+      "district": "Suite 351",
       "city": "Roscoeview",
       "zipcode": "33263"
     },
@@ -40,7 +40,7 @@
     "email": "kieren@exchange.com",
     "address": {
       "street": "Skiles Walks",
-      "suite": "Suite 351",
+      "district": "Suite 351",
       "city": "Roscoeview",
       "zipcode": "33263"
     },
@@ -49,5 +49,22 @@
     "session":"Inactive",
     "loggedin":"10-Aug 2023 01:05:56",
     "phone": "9965475841"
+  },
+  {
+    "id": 4,
+    "userid":"1767",
+    "name": "Richard Paul",
+    "email": "richard@exchange.com",
+    "address": {
+      "street": "Skiles Walks",
+      "district": "London",
+      "city": "Roscoeview",
+      "zipcode": "33263"
+    },
+    "status":"2",
+    "type":"MODERATOR",
+    "session":"Active",
+    "loggedin":"05-Aug 2023 01:05:56",
+    "phone": "6599474158"
   }
 ]

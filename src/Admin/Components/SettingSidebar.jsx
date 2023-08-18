@@ -10,7 +10,6 @@ import {
   LiaMoneyBillAltSolid,
   LiaCogSolid,
   LiaUserCheckSolid,
-  LiaUserCircleSolid,
 } from "react-icons/lia";
 
 const SettingSidebar = () => {
@@ -46,12 +45,7 @@ const SettingSidebar = () => {
       </Link>
       <Link to="/setting/admin">
         <ListGroup.Item className={`list-group-item-dark ${location.pathname === '/setting/admin' ? 'active' : ''}`}>
-          <LiaUserCheckSolid className="mr-2" /> Admin
-        </ListGroup.Item>
-      </Link>
-      <Link to="/setting/moderators">
-        <ListGroup.Item className="list-group-item-dark">
-          <LiaUserCircleSolid className="mr-2" /> Moderators
+          <LiaUserCheckSolid className="mr-2" /> Admin & Moderators
         </ListGroup.Item>
       </Link>
       <Link to="/setting/two-factor-authentication" >

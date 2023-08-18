@@ -16,7 +16,7 @@ const ChangePassword = () => {
                 <div class="form-group">
                   <label for="oldpass">Old Password</label>
                   <input
-                    className="form-control form-control-lg form-control-dark"
+                    className="form-control form-control-dark"
                     id="oldpass"
                     name="oldpass"
                     type="text"
@@ -26,7 +26,7 @@ const ChangePassword = () => {
                 <div class="form-group">
                   <label for="newpass">New Password</label>
                   <input
-                    className="form-control form-control-lg form-control-dark"
+                    className="form-control form-control-dark"
                     id="newpass"
                     name="newpass"
                     type="text"
@@ -36,7 +36,7 @@ const ChangePassword = () => {
                 <div class="form-group">
                   <label for="newpass">Confirm New Password</label>
                   <input
-                    className="form-control form-control-lg form-control-dark"
+                    className="form-control form-control-dark"
                     id="confirmnewpass"
                     name="confirmnewpass"
                     type="text"

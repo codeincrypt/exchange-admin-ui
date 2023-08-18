@@ -241,7 +241,8 @@ table > tbody > tr > td {
   box-shadow: 2px 2px 4px 2px #0000004a;
 }
 .badge-lg {
-  padding: 4px 7px 4px 7px;
+  padding: 3px 7px 3px 7px;
+  border-radius: 10px;
 }
 
 .input-elevated {

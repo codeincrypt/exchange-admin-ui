@@ -16,7 +16,7 @@ const CryptoCoins = () => {
                 <div class="form-group">
                   <label for="oldpass">Currency Name</label>
                   <input
-                    className="form-control form-control-lg form-control-dark"
+                    className="form-control form-control-dark"
                     id="oldpass"
                     name="oldpass"
                     type="text"
@@ -27,7 +27,7 @@ const CryptoCoins = () => {
                 <div class="form-group">
                   <label for="newpass">Currency assets code</label>
                   <input
-                    className="form-control form-control-lg form-control-dark"
+                    className="form-control form-control-dark"
                     id="newpass"
                     name="newpass"
                     type="text"
@@ -38,7 +38,7 @@ const CryptoCoins = () => {
                 <div class="form-group">
                   <label for="newpass">Currency Status</label>
                   <select
-                    className="form-control form-control-lg form-control-dark"
+                    className="form-control form-control-dark"
                     id="newpass"
                     name="newpass"
                     type="text"
