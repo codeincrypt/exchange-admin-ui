@@ -148,7 +148,6 @@ const TwoFA = () => {
                             You'll need this recovery code if you ever need to
                             sign in without your device
                           </p>
-                          <p className="text-md">Save it somewhere safe</p>
                         </div>
                       </div>
                       <div class="row justify-content-center mb-3">

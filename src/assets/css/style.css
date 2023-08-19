@@ -289,6 +289,12 @@ table > tbody > tr > td {
   border: 0px solid rgba(0,0,0,.125);
 }
 
+.sidebar-list-item:hover {
+  background: #f3ba2f;
+  color: #111111;
+  border-radius: 8px 0px 0px 8px;
+}
+
 .list-group-item-dark {
     position: relative;
     display: block;
@@ -331,4 +337,8 @@ label {
   color: #ddd;
   background-color: #222;
   border: 1px solid #111;
+}
+
+.border-hr {
+  border: 1px solid #3b3d47;
 }

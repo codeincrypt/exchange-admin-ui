@@ -8,6 +8,8 @@
       "street": "Hoeger Mall",
       "district": "Apt. 692",
       "city": "South Elvis",
+      "state": "South Elvis",
+      "country": "USA",
       "zipcode": "53919-4257"
     },
     "status":"1",
@@ -25,6 +27,8 @@
       "street": "Skiles Walks",
       "district": "Suite 351",
       "city": "Roscoeview",
+      "state": "Roscoeview",
+      "country": "Roscoeview",
       "zipcode": "33263"
     },
     "status":"1",
@@ -42,6 +46,8 @@
       "street": "Skiles Walks",
       "district": "Suite 351",
       "city": "Roscoeview",
+      "state": "Roscoeview",
+      "country": "Russia",
       "zipcode": "33263"
     },
     "status":"2",
@@ -59,6 +65,8 @@
       "street": "Skiles Walks",
       "district": "London",
       "city": "Roscoeview",
+      "state": "Roscoeview",
+      "country": "India",
       "zipcode": "33263"
     },
     "status":"2",
