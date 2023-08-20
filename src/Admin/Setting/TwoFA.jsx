@@ -150,7 +150,7 @@ const TwoFA = () => {
                           </p>
                         </div>
                       </div>
-                      <div class="row justify-content-center mb-3">
+                      <div class="row justify-content-center mb-3 mt-5">
                         <div class="col-3">
                           <ul className="nav text-md text-white font-weight-bold">
                             <li>zEVQIeSF3c</li>
@@ -172,15 +172,15 @@ const TwoFA = () => {
                       </div>
                       <div class="row justify-content-center">
                         <div class="col-8">
-                          <div className="text-center mb-4">
-                            <button className="btn btn-warning mx-2 px-4"> <FaRegCopy /> Copy</button>
-                            <button className="btn btn-warning mx-2 px-4"> <BiDownload /> Download</button>
-                          </div>
-                          <p className="small">
+                          <p className="small mb-4 text-center">
                             If you lose access to your phone, you won't be able
                             to log in without a recovery codes, Copy or write
                             down your codes and save it somewhere safe
                           </p>
+                          <div className="text-center ">
+                            <button className="btn btn-warning mx-2 px-4"> <FaRegCopy /> Copy</button>
+                            <button className="btn btn-warning mx-2 px-4"> <BiDownload /> Download</button>
+                          </div>
                         </div>
                       </div>
                     </React.Fragment>

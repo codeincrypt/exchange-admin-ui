@@ -101,7 +101,7 @@ const SendReceive = () => {
                     <td className="text-center">
                       <Link
                         to={`/send-receive/${item.transactionid}`}
-                        className="btn btn-sm btn-secondary"
+                        className="btn btn-sm btn-warning"
                       >
                         View
                       </Link>

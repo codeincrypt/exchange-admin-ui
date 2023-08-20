@@ -38,12 +38,12 @@ body {
   border: 1px solid #15161a00;
 }
 
-.sidebar {
+.my-sidebar {
   background-color: #1b1c20;
   width: 5%;
   z-index: 999;
   position: fixed;
-  padding: 15px;
+  /* padding: 15px; */
   height: 100vh;
 }
 
@@ -284,9 +284,11 @@ table > tbody > tr > td {
 .sidebar-list-item {
   position: relative;
   display: block;
+  text-align: center;
   color: #ccc;
-  padding: 0.75rem 1.25rem;
-  border: 0px solid rgba(0,0,0,.125);
+  padding: 12px 12px 12px 0px;
+  margin-left: 14px;
+  border: 0px solid rgba(0, 0, 0, 0.125);
 }
 
 .sidebar-list-item:hover {
@@ -296,13 +298,13 @@ table > tbody > tr > td {
 }
 
 .list-group-item-dark {
-    position: relative;
-    display: block;
-    padding: 0.75rem 1.25rem;
-    background : transparent;
-    color: #ddd;
-    font-size: 13px;
-    border: 1px solid rgba(0,0,0,.125);
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  background: transparent;
+  color: #ddd;
+  font-size: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 label {
@@ -318,12 +320,13 @@ label {
 }
 
 .icon-lg {
-  font-size: 15px ;
+  font-size: 15px;
 }
 
-.btn-group-sm>.btn, .btn-sm {
-  padding: 0.15rem 0.4rem;
-  font-size: .675rem;
+.btn-group-sm > .btn,
+.btn-sm {
+  padding: 0.2rem 0.7rem;
+  font-size: 12px;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -341,4 +344,31 @@ label {
 
 .border-hr {
   border: 1px solid #3b3d47;
+}
+
+.right-sidebar {
+  height: 100%;
+  width: 450px;
+  right: 0;
+  top: 0;
+  background-color: #1b1c20;
+  position: fixed !important;
+  z-index: 1;
+  box-shadow: -5px 2px 4px #15161a !important;
+  overflow: auto;
+}
+
+.right-sidebar-animate {
+  position: relative;
+  animation: animateright 0.4s;
+}
+@keyframes animateright {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
 }

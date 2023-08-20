@@ -16,7 +16,7 @@ const Sidebar = (props) => {
   // console.log(location.pathname);
 
   return (
-    <sidebar className="sidebar">
+    <sidebar className="my-sidebar">
       <div className='text-center mt-3'>
         <img src={logo} alt="binance" className="header-logo" />
       </div>

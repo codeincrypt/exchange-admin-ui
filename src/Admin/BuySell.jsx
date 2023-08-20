@@ -93,7 +93,7 @@ const BuySell = () => {
                     <td className="text-center">
                       <Link
                         to={`/buy-sell/${item.transactionid}`}
-                        className="btn btn-sm btn-secondary"
+                        className="btn btn-sm btn-warning"
                       >
                         View
                       </Link>

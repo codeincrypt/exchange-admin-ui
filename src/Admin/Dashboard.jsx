@@ -6,6 +6,7 @@ import CurrencyExchange from "./Components/Exchange";
 import cryptosendreceive from "../assets/json/cryptosendreceive.json";
 import cryptobalance from "../assets/json/cryptobalance.json";
 import currency from "../assets/json/currency.json";
+import fiat from "../assets/json/fiat.json";
 
 const Dashbord = () => {
   return (
@@ -47,15 +48,23 @@ const Dashbord = () => {
           </div>
         </div>
         <div className="col-lg-3">
-        <div className="card p-3">
-          <CurrencyExchange from={currency} to={currency} />
-        </div>
+          <div className="card p-3">
+            <CurrencyExchange from={currency} to={currency} />
+          </div>
         </div>
       </div>
 
       <div className="row">
         <div className="col-lg-6">
           <div className="card">
+            <div className="card-header">
+              <span>
+                <span className="h5">Fiat Deposit & Withdrawal</span>
+                <button className="btn btn-secondary float-right">
+                  View All
+                </button>
+              </span>
+            </div>
             <table class="table table-sm">
               <thead>
                 <tr>
@@ -64,9 +73,6 @@ const Dashbord = () => {
                   </th>
                   <th scope="col" className="text-uppercase">
                     Name
-                  </th>
-                  <th scope="col" className="text-uppercase">
-                    Assets
                   </th>
                   <th scope="col" className="text-uppercase">
                     Amount
@@ -83,16 +89,17 @@ const Dashbord = () => {
                 </tr>
               </thead>
               <tbody>
-                {cryptosendreceive.slice(0,5).map((item, index) => (
+                {fiat.slice(0, 5).map((item, index) => (
                   <tr>
-                    <th>{item.userid}</th>
-                    <td>{item.name}</td>
-                    <td className="text-center">{item.assets}</td>
+                    <td>{item.orderid}</td>
+                    <td>
+                      {item.name} <br /> {item.userid}
+                    </td>
                     <td className="text-center">{item.amount}</td>
                     <td className="text-center">
                       <span
                         className={`text-center badge badge-lg ${
-                          item.type === "RECEIVE"
+                          item.type === "DEPOSIT"
                             ? "badge-success"
                             : "badge-danger"
                         }`}
@@ -103,8 +110,8 @@ const Dashbord = () => {
                     <td className="text-center">{item.date}</td>
                     <td className="text-center">
                       <Link
-                        to={`payment-history/${item.id}`}
-                        className="btn btn-sm btn-secondary"
+                        to={`/fiat?orderid=${item.orderid}`}
+                        className="btn btn-sm btn-warning"
                       >
                         View
                       </Link>
@@ -117,6 +124,14 @@ const Dashbord = () => {
         </div>
         <div className="col-lg-6">
           <div className="card">
+            <div className="card-header">
+              <span>
+                <span className="h5">Send & Receive</span>
+                <button className="btn btn-secondary float-right">
+                  View All
+                </button>
+              </span>
+            </div>
             <table class="table table-sm">
               <thead>
                 <tr>
@@ -144,11 +159,12 @@ const Dashbord = () => {
                 </tr>
               </thead>
               <tbody>
-                {cryptosendreceive.slice(0,5).map((item, index) => (
+                {cryptosendreceive.slice(0, 5).map((item, index) => (
                   <tr>
                     <td>{item.transactionid}</td>
-                    <td>{item.name} <br />
-                    {item.userid}
+                    <td>
+                      {item.name} <br />
+                      {item.userid}
                     </td>
                     <td className="text-center">{item.assets}</td>
                     <td className="text-center">{item.amount}</td>
@@ -165,7 +181,10 @@ const Dashbord = () => {
                     </td>
                     <td className="text-center">{item.date}</td>
                     <td className="text-center">
-                      <Link to={`send-receive/${item.id}`} className="btn btn-sm btn-secondary" >
+                      <Link
+                        to={`send-receive/${item.id}`}
+                        className="btn btn-sm btn-warning"
+                      >
                         View
                       </Link>
                     </td>

@@ -81,13 +81,13 @@ const ChangePassword = () => {
                       <td className="text-center">
                         <Link
                           to={`/setting/admin/${item.id}`}
-                          className="btn btn-sm btn-secondary"
+                          className="btn btn-sm btn-warning mr-2"
                         >
                           View
                         </Link>
                         <Link
                           to={`/setting/admin/${item.id}`}
-                          className="btn btn-sm btn-secondary"
+                          className="btn btn-sm btn-success"
                         >
                           Access
                         </Link>
