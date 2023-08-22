@@ -15,6 +15,7 @@ import CryptoCoins from "./Admin/Setting/CryptoCoins";
 import TwoFA from "./Admin/Setting/TwoFA";
 import AdminSetting from "./Admin/Setting/AdminSetting";
 import CryptoBalance from "./Admin/CryptoBalance";
+import UsersView from "./Admin/UsersView";
 
 export const AdminRouter = [
   {
@@ -45,6 +46,11 @@ export const AdminRouter = [
   {
     path: "/users",
     component: Users,
+    exact: true,
+  },
+  {
+    path: "/users/:id",
+    component: UsersView,
     exact: true,
   },
   {

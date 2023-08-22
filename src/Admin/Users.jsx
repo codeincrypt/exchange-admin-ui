@@ -86,7 +86,7 @@ const Users = () => {
                 </td>
                 <td className="text-center">
                   <Link
-                    to={`/users/${item.id}`}
+                    to={`/users/${item.userid}`}
                     className="btn btn-sm btn-secondary"
                   >
                     View
