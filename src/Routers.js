@@ -14,6 +14,7 @@ import ChangePassword from "./Admin/Setting/ChangePassword";
 import CryptoCoins from "./Admin/Setting/CryptoCoins";
 import TwoFA from "./Admin/Setting/TwoFA";
 import AdminSetting from "./Admin/Setting/AdminSetting";
+import CryptoBalance from "./Admin/CryptoBalance";
 
 export const AdminRouter = [
   {
@@ -54,6 +55,11 @@ export const AdminRouter = [
   {
     path: "/buy-sell",
     component: BuySell,
+    exact: true,
+  },
+  {
+    path: "/crypto-balance",
+    component: CryptoBalance,
     exact: true,
   },
   {

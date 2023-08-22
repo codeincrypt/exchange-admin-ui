@@ -29,7 +29,7 @@ const Dashbord = () => {
       <div className="row mb-4">
         <div className="col-lg-9">
           <div className="row">
-            {cryptobalance.map((item, index) => (
+            {cryptobalance.slice(0, 6).map((item, index) => (
               <div className="col-lg-2">
                 <div className="card p-3">
                   <h6>

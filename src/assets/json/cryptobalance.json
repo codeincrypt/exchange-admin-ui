@@ -6,7 +6,8 @@
     "balance":"0.506",
     "usd":"$ 15,049",
     "address":"bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
-    "customer":"24"
+    "customer":"24",
+    "icon":"https://s2.coinmarketcap.com/static/img/coins/128x128/1.png"
   },
   {
     "id":2,
@@ -15,7 +16,8 @@
     "balance":"1.4365",
     "usd":"$ 2,563",
     "address":"0xcbd6832ebc203e49e2b771897067fce3c58575ac",
-    "customer":"75"
+    "customer":"75",
+    "icon":"https://s2.coinmarketcap.com/static/img/coins/128x128/1027.png"
   },
   {
     "id":3,
@@ -24,7 +26,8 @@
     "balance":"156.95",
     "usd":"$ 163",
     "address":"ltc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
-    "customer":"56"
+    "customer":"56",
+    "icon":"https://s2.coinmarketcap.com/static/img/coins/128x128/5426.png"
   },
   {
     "id":4,
@@ -33,7 +36,8 @@
     "balance":"4513",
     "usd":"$ 5,513",
     "address":"EKa52U93bEVLsuz7WUVyJ3xrr84umnqa33oYojkUZFpX",
-    "customer":"114"
+    "customer":"114",
+    "icon":"https://s2.coinmarketcap.com/static/img/coins/128x128/2.png"
   },
   {
     "id":5,
@@ -42,7 +46,8 @@
     "balance":"165",
     "usd":"$ 165",
     "address":"0xcbd6832ebc203e49e2b771897067fce3cc57ba58",
-    "customer":"315"
+    "customer":"315",
+    "icon":"https://s2.coinmarketcap.com/static/img/coins/128x128/1839.png"
   },
   {
     "id":6,
@@ -51,6 +56,17 @@
     "balance":"15665",
     "usd":"$ 6,521",
     "address":"addr1zxn9efv2f6w82hagxqtn62ju4m293tqvw0uhmdl64ch8uw6j2c79gy9l76sdg0xwhd7r0c0kna0tycz4y5s6mlenh8pq6s3z70",
-    "customer":"198"
+    "customer":"198",
+    "icon":"https://s2.coinmarketcap.com/static/img/coins/128x128/2010.png"
+  },
+  {
+    "id":7,
+    "currency":"Tether USD",
+    "asset":"USDT",
+    "balance":"1448",
+    "usd":"$ 1,448",
+    "address":"0x56178a0d5F301bAf6CF3e1Cd53d9863437345Bf9",
+    "customer":"538",
+    "icon":"https://s2.coinmarketcap.com/static/img/coins/128x128/825.png"
   }
 ]
