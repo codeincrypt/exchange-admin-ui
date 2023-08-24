@@ -16,6 +16,7 @@ import TwoFA from "./Admin/Setting/TwoFA";
 import AdminSetting from "./Admin/Setting/AdminSetting";
 import CryptoBalance from "./Admin/CryptoBalance";
 import UsersView from "./Admin/UsersView";
+import Paymenthistory from "./Admin/Paymenthistory";
 
 export const AdminRouter = [
   {
@@ -56,6 +57,11 @@ export const AdminRouter = [
   {
     path: "/send-receive",
     component: SendReceive,
+    exact: true,
+  },
+  {
+    path: "/payment-history",
+    component: Paymenthistory,
     exact: true,
   },
   {

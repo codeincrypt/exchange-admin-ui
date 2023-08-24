@@ -1,0 +1,38 @@
+[
+  {
+    "id":1,
+    "transactionid":198756,
+    "name":"Amit Sah",
+    "userid":"1002",
+    "description":"Amit transfer BTC to Raman",
+    "assets":"BTC",
+    "amount":"0.0045",
+    "type":"SEND",
+    "txntype":"DEBIT",
+    "date":"25/12/2022"
+  },
+  {
+    "id":3,
+    "transactionid":198757,
+    "name":"John Jacob",
+    "userid":"4589",
+    "description":"John receive XRP from rjkkhr78f78b7dfg78gdf7f7gdf7yht6",
+    "assets":"XRP",
+    "amount":"24",
+    "type":"RECEIVE",
+    "txntype":"CREDIT",
+    "date":"25/12/2022"
+  },
+  {
+    "id":3,
+    "transactionid":198758,
+    "name":"Amit Sah",
+    "userid":"1002",
+    "description":"Trax deposit $200 in wallet",
+    "assets":"USD",
+    "amount":"$200",
+    "type":"DEPOSIT",
+    "txntype":"CREDIT",
+    "date":"25/12/2022"
+  }
+]
