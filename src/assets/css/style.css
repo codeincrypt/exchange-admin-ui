@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lexend:wght@300;400;500;600&display=swap");
 
 body {
-  background-color: #15161a;
-  color: #a2a1a3;
+  /* background-color: #15161a;
+  color: #a2a1a3; */
   font-size: 13px;
   font-family: "Inter", sans-serif;
   font-family: "Lexend", sans-serif;
@@ -28,7 +28,7 @@ body {
   background-color: #15161a !important;
 }
 
-.btn-secondary {
+.dark-mode .btn-secondary {
   background-color: #1e1f24 !important;
   border: 1px solid #15161a00;
 }
@@ -234,7 +234,8 @@ table > tbody > tr > td {
 .header-logo {
   height: 40px;
 }
-.card {
+
+.dark-mode .card {
   background: #1b1c20;
   border-radius: 15px;
   overflow: hidden;
@@ -245,12 +246,17 @@ table > tbody > tr > td {
   border-radius: 10px;
 }
 
+.dark-mode .input-elevated {
+  color: #888;
+  background: #1b1c20;
+}
+
 .input-elevated {
   font-size: 13px;
   line-height: 1.5;
   border: none;
-  color: #888;
-  background: #1b1c20;
+  color: #ddd;
+  background: #eee;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%2720%27 height=%2720%27 viewBox=%270 0 20 20%27><path fill=%27%23838D99%27 d=%27M13.22 14.63a8 8 0 1 1 1.41-1.41l4.29 4.29a1 1 0 1 1-1.41 1.41l-4.29-4.29zm-.66-2.07a6 6 0 1 0-8.49-8.49 6 6 0 0 0 8.49 8.49z%27></path></svg>");
   background-repeat: no-repeat;
   background-position: 10px 10px;
@@ -281,6 +287,10 @@ table > tbody > tr > td {
   margin-bottom: 0;
 }
 
+.dark-mode .sidebar-list {
+  background: #1b1c20;
+}
+
 .sidebar-list-item {
   position: relative;
   display: block;
@@ -289,6 +299,12 @@ table > tbody > tr > td {
   padding: 12px 12px 12px 0px;
   margin-left: 14px;
   border: 0px solid rgba(0, 0, 0, 0.125);
+}
+
+.dark-mopde .sidebar-list-item:hover {
+  background: #111;
+  color: #fff;
+  border-radius: 8px 0px 0px 8px;
 }
 
 .sidebar-list-item:hover {

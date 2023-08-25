@@ -3,6 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { UserContext } from "../../App";
 import { useNavigate } from "react-router-dom";
+
+import { LiaCogSolid } from 'react-icons/lia';
+import { BiUser, BiLogIn } from 'react-icons/bi';
+import { FaSun } from 'react-icons/fa';
+
 const Header = () => {
   // eslint-disable-next-line
   const { dispatch } = useContext(UserContext);
@@ -12,8 +17,16 @@ const Header = () => {
   const redirect = e => navigate(e)
 
   const switchMode = () => {
-    
+    var element = document.getElementById("darkmode");
+    if (element.classList.contains('dark-mode')) {
+      element.classList.remove('dark-mode');
+      localStorage.setItem('darkmode', "")
+    } else {
+      element.classList.add('dark-mode');
+      localStorage.setItem('darkmode', "darkmode")
+    }
   }
+
 
   return (
     <React.Fragment>
@@ -30,19 +43,19 @@ const Header = () => {
               </div>
 
               <Nav.Link className="p-0 ml-2">
-                <button className="btn btn-secondary" onClick={switchMode}> <i className="fa fa-sun"></i> </button>
+                <button className="btn btn-secondary" id="changeMode" title="Change Mode" onClick={switchMode}> <FaSun /> </button>
               </Nav.Link>
 
               <Nav.Link className="p-0 ml-2">
-                <button className="btn btn-secondary" onClick={(e) => redirect("/profile")}> <i className="fa fa-user"></i> </button>
+                <button className="btn btn-secondary" onClick={(e) => redirect("/profile")}> <BiUser /> </button>
               </Nav.Link>
 
               <Nav.Link className="p-0 ml-2" >
-                <button className="btn btn-secondary" onClick={(e) => redirect("/setting")}> <i className="fa fa-cog"></i> </button>
+                <button className="btn btn-secondary" onClick={(e) => redirect("/setting")}> <LiaCogSolid /> </button>
               </Nav.Link>
 
               <Nav.Link className="p-0 ml-2">
-                <button className="btn btn-secondary" onClick={Logout}> <i className="fa fa-sign-out-alt"></i> </button>
+                <button className="btn btn-secondary" onClick={Logout}> <BiLogIn /> </button>
               </Nav.Link>
 
             </Nav>
