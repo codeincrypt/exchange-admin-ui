@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { UserContext } from "../../App";
@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { LiaCogSolid } from 'react-icons/lia';
 import { BiUser, BiLogIn } from 'react-icons/bi';
 import { FaSun } from 'react-icons/fa';
+import { PiMoonFill } from 'react-icons/pi';
 
 const Header = () => {
   // eslint-disable-next-line
@@ -16,17 +17,29 @@ const Header = () => {
   const Logout = () => navigate("/login")
   const redirect = e => navigate(e)
 
+  const [icon, setIcon] = useState(false);
+
   const switchMode = () => {
     var element = document.getElementById("darkmode");
     if (element.classList.contains('dark-mode')) {
       element.classList.remove('dark-mode');
       localStorage.setItem('darkmode', "")
+      setIcon(false)
     } else {
       element.classList.add('dark-mode');
       localStorage.setItem('darkmode', "darkmode")
+      setIcon(true)
     }
   }
 
+  useEffect(() => {
+    var element = document.getElementById("darkmode");
+    if (localStorage.getItem('darkmode')) {
+      element.classList.add('dark-mode');
+      setIcon(true)
+    }
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <React.Fragment>
@@ -43,7 +56,9 @@ const Header = () => {
               </div>
 
               <Nav.Link className="p-0 ml-2">
-                <button className="btn btn-secondary" id="changeMode" title="Change Mode" onClick={switchMode}> <FaSun /> </button>
+                <button className="btn btn-secondary" id="changeMode" title="Change Mode" onClick={switchMode}>
+                  {icon ? (<FaSun />) : (<PiMoonFill />)}
+                </button>
               </Nav.Link>
 
               <Nav.Link className="p-0 ml-2">
