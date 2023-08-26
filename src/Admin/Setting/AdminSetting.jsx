@@ -106,7 +106,6 @@ const ChangePassword = () => {
               </div>
               <div className="row justify-content-center">
                 <div className="col-lg-6">
-
                   <div class="form-group">
                     <label for="oldpass">Name</label>
                     <input
@@ -138,37 +137,31 @@ const ChangePassword = () => {
                   </div>
 
                   <div class="form-group">
-                  <label for="newpass">User type</label>
-                  <select
-                    className="form-control form-control-lg form-control-dark"
-                    id="newpass"
-                    name="newpass"
-                    type="text"
-                  >
-                    <option>Admin</option>
-                    <option>Moderators</option>
-                  </select>
-                </div>
+                    <label for="newpass">User type</label>
+                    <select className="form-control form-control-dark" id="newpass" name="newpass" type="text">
+                      <option>Admin</option>
+                      <option>Moderators</option>
+                    </select>
+                  </div>
 
                   <div class="form-group">
-                  <label for="newpass">Status</label>
-                  <select
-                    className="form-control form-control-lg form-control-dark"
-                    id="newpass"
-                    name="newpass"
-                    type="text"
-                  >
-                    <option>Active</option>
-                    <option>Inactive</option>
-                  </select>
-                </div>
+                    <label for="newpass">Status</label>
+                    <select
+                      className="form-control form-control-dark"
+                      id="newpass"
+                      name="newpass"
+                      type="text"
+                    >
+                      <option>Active</option>
+                      <option>Inactive</option>
+                    </select>
+                  </div>
 
-                <div class="form-group">
-                  <button type="button" className="btn btn-warning btn-block">
-                    Submit
-                  </button>
-                </div>
-
+                  <div class="form-group">
+                    <button type="button" className="btn btn-warning btn-block">
+                      Submit
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

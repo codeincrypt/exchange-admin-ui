@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <Navbar className="bg-dark text-white">
+      <Navbar className="text-white">
           <Navbar.Brand className="text-white">
             Binance Admin Dashboard
           </Navbar.Brand>
