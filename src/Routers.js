@@ -17,6 +17,7 @@ import AdminSetting from "./Admin/Setting/AdminSetting";
 import CryptoBalance from "./Admin/CryptoBalance";
 import UsersView from "./Admin/UsersView";
 import Paymenthistory from "./Admin/Paymenthistory";
+import CryptoBalanceChart from "./Admin/CryptoBalanceChart";
 
 export const AdminRouter = [
   {
@@ -72,6 +73,11 @@ export const AdminRouter = [
   {
     path: "/crypto-balance",
     component: CryptoBalance,
+    exact: true,
+  },
+  {
+    path: "/crypto-balance/:id",
+    component: CryptoBalanceChart,
     exact: true,
   },
   {

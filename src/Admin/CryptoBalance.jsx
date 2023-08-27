@@ -1,7 +1,9 @@
 import React from "react";
 import { TbReload } from "react-icons/tb";
+import { GoGraph } from "react-icons/go";
 
 import cryptobalance from "../assets/json/cryptobalance.json";
+import { Link } from "react-router-dom";
 
 const CryptoBalance = () => {
   return (
@@ -35,20 +37,23 @@ const CryptoBalance = () => {
                     style={{ width: "42px" }}
                   />
                 </td>
-                <td width="10%" className="align-middle">
+                <td width="12%" className="align-middle">
                   {item.currency}{" "}
                   <span className="font-weight-bold ml-2">{item.asset}</span>{" "}
                 </td>
-                <td width="55%" className="align-middle">
+                <td width="50%" className="align-middle">
                   {item.address}
                 </td>
-                <td width="12%" className="align-middle text-center">
+                <td width="10%" className="align-middle">
                   <h6 className="text-white text-right">{item.balance}</h6>
                 </td>
-                <td width="5%" className="align-middle">
+                <td width="10%" className="align-middle text-center">
+                  <Link className="btn btn-secondary" to={`/crypto-balance/${item.asset}`} title={`View balance details in chart of ${item.currency} (${item.asset})`}><GoGraph /></Link>
+                </td>
+                <td width="5%" className="align-middle text-center">
                   <button
                     className="btn text-white"
-                    title={`Reload ${item.currency} (${item.asset}) balance`}
+                    title={`Recheck ${item.currency} (${item.asset}) current balance`}
                   >
                     <TbReload />
                   </button>

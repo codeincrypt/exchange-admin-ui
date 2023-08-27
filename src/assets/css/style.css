@@ -410,6 +410,7 @@ label {
   z-index: 2;
   color: #111;
   border: 0;
+  font-weight: 500;
   background-color: #f3ba2f;
   /* border-color: #947428; */
 }
@@ -467,4 +468,9 @@ label {
     right: 0;
     opacity: 1;
   }
+}
+
+.line-chart-card {
+  height: 450px;
+  width: 100%;
 }
