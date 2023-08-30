@@ -36,6 +36,14 @@ const Profile = () => {
                 <h6>{profiledata.userid}</h6>
               </div>
             </div>
+            <div className="row">
+              <div className="col-lg-3">
+                <p>UUID</p>
+              </div>
+              <div className="col-lg-9">
+                <h6>{profiledata.uuid}</h6>
+              </div>
+            </div>
               <div className="border-hr"></div>
             <div className="row">
               <div className="col-lg-4">

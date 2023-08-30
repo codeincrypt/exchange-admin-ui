@@ -6,6 +6,7 @@ import logo from "../assets/images/icon-logo.png";
 
 const Login = () => {
   let navigate = useNavigate();
+  const [loginCard, setLoginCard] = useState(true);
   const [data, setData] = useState({ username: "", password: "" });
   const handleChange = (e) => {
     data[e.target.name] = e.target.value;
@@ -13,6 +14,10 @@ const Login = () => {
   };
 
   const handleSubmit = async () => {
+    setLoginCard(false)
+  };
+
+  const otphandleSubmit = async () => {
     navigate("/admin");
   };
 
@@ -25,28 +30,52 @@ const Login = () => {
             <div className="login-card">
               <img src={logo} alt="binance" className="login-logo" />
               <h2 className="text-white my-3">Admin Login </h2>
-              <Form.Control
-                className="form-control-dark"
-                type="text"
-                name="username"
-                placeholder="Username"
-                onChange={(e) => handleChange(e)}
-              />
-              <Form.Control
-                type="text"
-                className="form-control-dark mt-2"
-                name="password"
-                placeholder="Password"
-                onChange={(e) => handleChange(e)}
-              />
-              <div className="text-center mt-3">
-                <button
-                  className="btn btn-warning btn-block"
-                  onClick={handleSubmit}
-                >
-                  Login
-                </button>
-              </div>
+
+              {loginCard === true ? (
+                <span>
+                  <Form.Control
+                    className="form-control-dark"
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                    onChange={(e) => handleChange(e)}
+                  />
+                  <Form.Control
+                    type="text"
+                    className="form-control-dark mt-2"
+                    name="password"
+                    placeholder="Password"
+                    onChange={(e) => handleChange(e)}
+                  />
+                  <div className="text-center mt-3">
+                    <button
+                      className="btn btn-warning btn-block"
+                      onClick={handleSubmit}
+                    >
+                      Login
+                    </button>
+                  </div>
+                </span>
+              ) : (
+                <span>
+                  <p className="">Enter OTP sent to your registered mobile number</p>
+                  <Form.Control
+                    className="form-control-dark"
+                    type="number"
+                    name="otp"
+                    placeholder="OTP"
+                    onChange={(e) => handleChange(e)}
+                  />
+                  <div className="text-center mt-3">
+                    <button
+                      className="btn btn-warning btn-block"
+                      onClick={otphandleSubmit}
+                    >
+                      Verify OTP
+                    </button>
+                  </div>
+                </span>
+              )}
             </div>
           </div>
           <div className="col-4"></div>

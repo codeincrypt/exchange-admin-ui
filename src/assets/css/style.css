@@ -8,6 +8,15 @@ body {
   font-family: "Lexend", sans-serif;
   font-weight: 300;
 }
+
+p {
+  color : #444;
+}
+
+.dark-mode p {
+    color : #bbb;
+}
+
 /* 
 .dark-mode .form-control-dark {
   color: #b2b9c0;
@@ -404,6 +413,13 @@ table > tbody > tr > td {
 label {
   font-size: 13px !important;
   font-weight: 300 !important;
+  color : #444;
+}
+
+.dark-mode label {
+  font-size: 13px !important;
+  font-weight: 300 !important;
+    color : #bbb;
 }
 
 .list-group-item.active {
