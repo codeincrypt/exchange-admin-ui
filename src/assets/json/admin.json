@@ -16,7 +16,8 @@
     "type":"ADMIN",
     "session":"Active",
     "loggedin":"17-Aug 2023 01:05:56",
-    "phone": "9547896541"
+    "phone": "9547896541",
+    "uuid": "83a931f5-8d47-4103-873c-dd37bfac8772"
   },
   {
     "id": 2,
@@ -35,7 +36,8 @@
     "type":"SUPERADMIN",
     "session":"Active",
     "loggedin":"17-Aug 2023 01:05:56",
-    "phone": "9896547541"
+    "phone": "9896547541",
+    "uuid": "fcfd89c2-a5a3-4309-ae64-d0988f6ad359"
   },
   {
     "id": 3,
@@ -54,7 +56,8 @@
     "type":"SUPERADMIN",
     "session":"Inactive",
     "loggedin":"10-Aug 2023 01:05:56",
-    "phone": "9965475841"
+    "phone": "9965475841",
+    "uuid": "b171f738-9551-462a-b1a5-b0bcd26e8e2d"
   },
   {
     "id": 4,
@@ -73,6 +76,7 @@
     "type":"MODERATOR",
     "session":"Active",
     "loggedin":"05-Aug 2023 01:05:56",
-    "phone": "6599474158"
+    "phone": "6599474158",
+    "uuid": "b691e948-d129-43f1-ba3d-d5813e84a77f"
   }
 ]

@@ -1,11 +1,11 @@
+// Home Page
+import Login from "./Home/Login";
+
 // Admin Page
+import Users from "./Admin/Users";
 import Dashbord from "./Admin/Dashboard";
 import Profile from "./Admin/Profile";
 import Operations from "./Admin/Operations";
-
-// Home Page
-import Login from "./Home/Login";
-import Users from "./Admin/Users";
 import SendReceive from "./Admin/SendReceive";
 import Pagenotfound from "./Admin/PageNotFound";
 import BuySell from "./Admin/BuySell";
@@ -18,11 +18,17 @@ import CryptoBalance from "./Admin/CryptoBalance";
 import UsersView from "./Admin/UsersView";
 import Paymenthistory from "./Admin/Paymenthistory";
 import CryptoBalanceChart from "./Admin/CryptoBalanceChart";
+import AdminView from "./Admin/Setting/AdminView";
 
 export const AdminRouter = [
   {
     path: "/admin",
     component: Dashbord,
+    exact: true,
+  },
+  {
+    path: "/setting/admin/:id",
+    component: AdminView,
     exact: true,
   },
   {

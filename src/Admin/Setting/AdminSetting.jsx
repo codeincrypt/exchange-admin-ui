@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import {Button, Modal} from 'react-bootstrap';
 
 import SettingSidebar from "../Components/SettingSidebar";
 import admin from "../../assets/json/admin.json";
 
 const ChangePassword = () => {
-  // const [show, setShow] = useState(false);
   const [viewcard, setViewcard] = useState(1);
 
   const showList = () => setViewcard(1);
   const showAddNew = () => setViewcard(2);
-
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
 
   return (
     <div className="col-lg-12">
@@ -80,7 +75,7 @@ const ChangePassword = () => {
                       <td className="text-center">{item.loggedin}</td>
                       <td className="text-center">
                         <Link
-                          to={`/setting/admin/${item.id}`}
+                          to={`/setting/admin/${item.userid}`}
                           className="btn btn-sm btn-warning mr-2"
                         >
                           View
@@ -169,20 +164,6 @@ const ChangePassword = () => {
         </div>
       </div>
 
-      {/* <Modal show={show} onHide={handleClose} centered>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal> */}
     </div>
   );
 };

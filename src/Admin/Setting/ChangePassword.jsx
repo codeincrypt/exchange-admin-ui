@@ -1,7 +1,7 @@
 import React from "react";
 import SettingSidebar from "../Components/SettingSidebar";
 
-const ChangePassword = () => {
+const AdminSetting = () => {
   return (
     <div className="col-lg-12">
       <div className="row">
@@ -58,4 +58,4 @@ const ChangePassword = () => {
   );
 };
 
-export default ChangePassword;
+export default AdminSetting;
