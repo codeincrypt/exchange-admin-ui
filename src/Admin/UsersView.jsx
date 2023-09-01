@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import users from "../assets/json/users.json";
 import { useParams } from "react-router-dom";
+import users from "../assets/json/users.json";
 import Loader from "./Components/Loader";
 
 import { FiUsers } from 'react-icons/fi';
