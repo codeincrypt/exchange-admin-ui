@@ -428,6 +428,17 @@ label {
   font-size: 30px;
 }
 
+.card-bg-image {
+  background-repeat: round;
+  position: absolute;
+  top: 30%;
+  border-radius: 112%;
+  left: 46%;
+  opacity: 0.2;
+  width: 100px;
+  height: 100px;
+}
+
 .list-group-item.active {
   z-index: 2;
   color: #111;

@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom";
 import users from "../assets/json/users.json";
 import Loader from "./Components/Loader";
 
-import { FiUsers } from 'react-icons/fi';
-import { LiaMoneyBillAltSolid, LiaCogSolid } from 'react-icons/lia';
-import { PiContactlessPayment } from 'react-icons/pi';
+import { FiUsers } from "react-icons/fi";
+import { LiaMoneyBillAltSolid, LiaCogSolid } from "react-icons/lia";
+import { PiContactlessPayment } from "react-icons/pi";
 
 const UsersView = () => {
   const { id } = useParams();
@@ -35,25 +35,39 @@ const UsersView = () => {
               <button
                 className="btn btn-secondary ml-2"
                 onClick={console.log("here")}
-              > <FiUsers className="mr-2" />
+              >
+                {" "}
+                <FiUsers className="mr-2" />
                 Profile
               </button>
               <button
                 className="btn btn-secondary ml-2"
                 onClick={console.log("here")}
-              > <PiContactlessPayment className="mr-2" />
-                Wallet
+              >
+                {" "}
+                <FiUsers className="mr-2" />
+                Crypto balance
               </button>
               <button
                 className="btn btn-secondary ml-2"
                 onClick={console.log("here")}
-              ><LiaMoneyBillAltSolid className="mr-2" />
+              >
+                {" "}
+                <PiContactlessPayment className="mr-2" />
+                Wallet History
+              </button>
+              <button
+                className="btn btn-secondary ml-2"
+                onClick={console.log("here")}
+              >
+                <LiaMoneyBillAltSolid className="mr-2" />
                 Fiat
               </button>
               <button
                 className="btn btn-secondary ml-2"
                 onClick={console.log("here")}
-              ><LiaCogSolid className="mr-2" />
+              >
+                <LiaCogSolid className="mr-2" />
                 Setting
               </button>
               {/* <div className="col-lg-1"></div> */}

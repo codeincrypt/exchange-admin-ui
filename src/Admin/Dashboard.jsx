@@ -13,15 +13,15 @@ const Dashbord = () => {
     <div className="col-lg-12">
       <div className="row mb-4">
         <div className="col-2">
-          <h6>Total Balance</h6>
+          <h6 className="text-muted font-weight-light">Total Balance</h6>
           <h3>$137,987</h3>
         </div>
         <div className="col-2">
-          <h6>Crypto</h6>
+          <h6 className="text-muted font-weight-light">Crypto</h6>
           <h3>$59,872</h3>
         </div>
         <div className="col-2">
-          <h6>Fiat</h6>
+          <h6 className="text-muted font-weight-light">Fiat</h6>
           <h3>$78,115</h3>
         </div>
       </div>
@@ -38,9 +38,9 @@ const Dashbord = () => {
                   </h6>
                   <hr />
                   <h5 className="text-white"> {item.balance}</h5>
-                  <h6 className="font-weight-light mb-1 mt-2">Balance</h6>
+                  <h6 className="font-weight-light mb-1 mt-2 text-muted">Balance</h6>
                   <h6 className="text-white">{item.usd}</h6>
-                  <h6 className="font-weight-light mb-1 mt-2">Customer Hold</h6>
+                  <h6 className="font-weight-light mb-1 mt-2 text-muted">Customer Hold</h6>
                   <h6 className="text-white">{item.customer}</h6>
                 </div>
               </div>
@@ -60,9 +60,9 @@ const Dashbord = () => {
             <div className="card-header">
               <span>
                 <span className="h5">Fiat Deposit & Withdrawal</span>
-                <button className="btn btn-secondary float-right">
+                <Link to="/fiat" className="btn btn-secondary float-right">
                   View All
-                </button>
+                </Link>
               </span>
             </div>
             <table class="table table-sm">
@@ -127,9 +127,9 @@ const Dashbord = () => {
             <div className="card-header">
               <span>
                 <span className="h5">Send & Receive</span>
-                <button className="btn btn-secondary float-right">
+                <Link to="/send-receive" className="btn btn-secondary float-right">
                   View All
-                </button>
+                </Link>
               </span>
             </div>
             <table class="table table-sm">

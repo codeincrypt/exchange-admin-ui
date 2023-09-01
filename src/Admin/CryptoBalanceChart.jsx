@@ -85,8 +85,10 @@ const CryptoBalanceChart = () => {
       {
         label: `${id} Balance Chart `,
         data: datalists,
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: `rgba(${mydata.color})`,
+        backgroundColor: `rgba(${mydata.color}, 0.5)`,
+        // borderColor: `rgb(255, 99, 132)`,
+        // backgroundColor: "rgba(255, 99, 132, 0.5)",
       },
     ],
   };
@@ -103,8 +105,8 @@ const CryptoBalanceChart = () => {
             <Loader />
           ) : (
             <div className="card">
-              <div className="">
                 <Line data={data} />
+              <div className="card-bg-image" style={{backgroundImage: `url(${mydata.icon})`}}>
               </div>
             </div>
           )}
@@ -168,14 +170,14 @@ const CryptoBalanceChart = () => {
               <div className="col-6">
                 <div className="card p-3">
                   <h3>0.05</h3>
-                  <h5 className="text-success font-weight-light ">Send</h5>
+                  <h5 className="text-danger font-weight-light ">Send</h5>
                 </div>
               </div>
 
               <div className="col-6">
                 <div className="card p-3">
                   <h3>0.05</h3>
-                  <h5 className="text-danger font-weight-light ">Receive</h5>
+                  <h5 className="text-success font-weight-light ">Receive</h5>
                 </div>
               </div>
             </div>
