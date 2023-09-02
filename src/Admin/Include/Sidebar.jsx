@@ -1,4 +1,4 @@
-// import { useLocation } from 'react-router';
+import { useLocation } from 'react-router';
 import logo from "../../assets/images/icon-logo.png";
 import { Link } from 'react-router-dom';
 
@@ -12,8 +12,7 @@ import { LiaMoneyBillAltSolid, LiaCogSolid } from 'react-icons/lia';
 
 
 const Sidebar = (props) => {
-  // const location = useLocation();
-  // console.log(location.pathname);
+  const location = useLocation();
 
   return (
     <sidebar className="my-sidebar">
@@ -22,15 +21,18 @@ const Sidebar = (props) => {
       </div>
 
       <ul class="sidebar-list mt-4">
-        <Link className='sidebar-list-item icon-lg' to="/dashboard" title="Dashboard" ><AiOutlineDashboard /></Link>
-        <Link className='sidebar-list-item icon-lg' to="/crypto-balance" title="Crypto balance" ><BsCurrencyBitcoin /></Link>
-        <Link className='sidebar-list-item icon-lg' to="/users" title="Users" ><FiUsers /></Link>
-        <Link className='sidebar-list-item icon-lg' to="/operations" title="Send Operations" ><FaMoneyBillAlt /></Link>
-        <Link className='sidebar-list-item icon-lg' to="/payment-history" title="Payment History" ><BsWallet /></Link>
-        <Link className='sidebar-list-item icon-lg' to="/send-receive" title="Send Receive" ><RiFolderHistoryLine /></Link>
-        <Link className='sidebar-list-item icon-lg' to="/buy-sell" title="Buy Sell" ><PiContactlessPayment /></Link>
-        <Link className='sidebar-list-item icon-lg' to="/fiat" title="Fiat Deposit & Withdrawal" ><LiaMoneyBillAltSolid /></Link>
-        <Link className='sidebar-list-item icon-lg' to="/setting" title="Setting" ><LiaCogSolid /></Link>
+        <Link 
+        className={`sidebar-list-item icon-lg ${location.pathname === '/dashboard' ? 'active' : ''} ${location.pathname === '/' ? 'active' : ''}`}
+        to="/dashboard" title="Dashboard"
+        ><AiOutlineDashboard /></Link>
+        <Link className={`sidebar-list-item icon-lg ${location.pathname === '/crypto-balance' ? 'active' : ''}`} to="/crypto-balance" title="Crypto balance" ><BsCurrencyBitcoin /></Link>
+        <Link className={`sidebar-list-item icon-lg ${location.pathname === '/users' ? 'active' : ''}`} to="/users" title="Users" ><FiUsers /></Link>
+        <Link className={`sidebar-list-item icon-lg ${location.pathname === '/operations' ? 'active' : ''}`} to="/operations" title="Send Operations" ><FaMoneyBillAlt /></Link>
+        <Link className={`sidebar-list-item icon-lg ${location.pathname === '/payment-history' ? 'active' : ''}`} to="/payment-history" title="Payment History" ><BsWallet /></Link>
+        <Link className={`sidebar-list-item icon-lg ${location.pathname === '/send-receive' ? 'active' : ''}`} to="/send-receive" title="Send Receive" ><RiFolderHistoryLine /></Link>
+        <Link className={`sidebar-list-item icon-lg ${location.pathname === '/buy-sell' ? 'active' : ''}`} to="/buy-sell" title="Buy Sell" ><PiContactlessPayment /></Link>
+        <Link className={`sidebar-list-item icon-lg ${location.pathname === '/fiat' ? 'active' : ''}`} to="/fiat" title="Fiat Deposit & Withdrawal" ><LiaMoneyBillAltSolid /></Link>
+        <Link className={`sidebar-list-item icon-lg ${location.pathname === '/setting' ? 'active' : ''}`} to="/setting" title="Setting" ><LiaCogSolid /></Link>
       </ul>
     </sidebar>
   )

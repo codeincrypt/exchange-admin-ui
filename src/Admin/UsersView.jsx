@@ -6,6 +6,7 @@ import Loader from "./Components/Loader";
 import { FiUsers } from "react-icons/fi";
 import { LiaMoneyBillAltSolid, LiaCogSolid } from "react-icons/lia";
 import { PiContactlessPayment } from "react-icons/pi";
+import { ImAttachment } from "react-icons/im";
 
 const UsersView = () => {
   const { id } = useParams();
@@ -36,7 +37,6 @@ const UsersView = () => {
                 className="btn btn-secondary ml-2"
                 onClick={console.log("here")}
               >
-                {" "}
                 <FiUsers className="mr-2" />
                 Profile
               </button>
@@ -44,7 +44,6 @@ const UsersView = () => {
                 className="btn btn-secondary ml-2"
                 onClick={console.log("here")}
               >
-                {" "}
                 <FiUsers className="mr-2" />
                 Crypto balance
               </button>
@@ -52,7 +51,6 @@ const UsersView = () => {
                 className="btn btn-secondary ml-2"
                 onClick={console.log("here")}
               >
-                {" "}
                 <PiContactlessPayment className="mr-2" />
                 Wallet History
               </button>
@@ -61,7 +59,7 @@ const UsersView = () => {
                 onClick={console.log("here")}
               >
                 <LiaMoneyBillAltSolid className="mr-2" />
-                Fiat
+                Fiat History
               </button>
               <button
                 className="btn btn-secondary ml-2"
@@ -70,14 +68,13 @@ const UsersView = () => {
                 <LiaCogSolid className="mr-2" />
                 Setting
               </button>
-              {/* <div className="col-lg-1"></div> */}
             </div>
           </div>
           <div className="card p-5">
             <div className="row justify-content-center">
               <div className="col-lg-2">
                 <img
-                  src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/female1-512.png"
+                  src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/7912768/avatar-icon-md.png"
                   className="img-fluid"
                   alt="profile"
                 />
@@ -92,8 +89,21 @@ const UsersView = () => {
                   <div className="col-lg-3">
                     <p>Email</p>
                   </div>
-                  <div className="col-lg-9">
+                  <div className="col-lg-8">
                     <h6>{profiledata.email}</h6>
+                  </div>
+                  <div className="col-lg-1">
+                    <h6>
+                      {profiledata.status === "1" ? (
+                        <span className="badge-success badge badge-lg">
+                          Active
+                        </span>
+                      ) : (
+                        <span className="badge-danger badge badge-lg">
+                          Blocked
+                        </span>
+                      )}
+                    </h6>
                   </div>
                 </div>
                 <div className="row">
@@ -130,6 +140,83 @@ const UsersView = () => {
                   <div className="col-lg-4">
                     <p className="mb-1 mt-4">Country</p>
                     <h6>-</h6>
+                  </div>
+                </div>
+                <div className="border-hr mt-3"></div>
+                <div className="row">
+                  <div className="col-lg-12">
+                    <p className="mb-1 mt-4">KYC status</p>
+                    <h6>
+                      {profiledata.kyc === "1" ? (
+                        <span className="badge-warning badge badge-lg">
+                          Tier 1
+                        </span>
+                      ) : profiledata.kyc === "2" ? (
+                        <span className="badge-warning badge badge-lg">
+                          Tier 2
+                        </span>
+                      ) : profiledata.kyc === "3" ? (
+                        <span className="badge-success badge badge-lg">
+                          Verified
+                        </span>
+                      ) : (
+                        <span className="badge-danger badge badge-lg">
+                          No KYC
+                        </span>
+                      )}
+                    </h6>
+                  </div>
+                  <div className="col-lg-4">
+                    <p className="mb-1 mt-4">Aadhar Number</p>
+                    <h6> 1234-5678-9810</h6>
+                  </div>
+                  <div className="col-lg-4">
+                    <p className="mb-1 mt-4">Aadhar Card Front</p>
+                    <h6>
+                      {" "}
+                      Updated{" "}
+                      <ImAttachment
+                        className="ml-2"
+                        style={{ cursor: "pointer" }}
+                      />{" "}
+                    </h6>
+                  </div>
+                  <div className="col-lg-4">
+                    <p className="mb-1 mt-4">Aadhar Card Back</p>
+                    <h6>
+                      {" "}
+                      Updated{" "}
+                      <ImAttachment
+                        className="ml-2"
+                        style={{ cursor: "pointer" }}
+                      />{" "}
+                    </h6>
+                  </div>
+                  <div className="col-lg-4">
+                    <p className="mb-1 mt-4">PAN Card</p>
+                    <h6> ABCDE1234Z</h6>
+                  </div>
+                  <div className="col-lg-8">
+                    <p className="mb-1 mt-4">PAN Card</p>
+                    <h6 className="text-danger">
+                      {" "}
+                      Not Updated{" "}
+                      <ImAttachment
+                        className="ml-2"
+                        style={{ cursor: "pointer" }}
+                      />{" "}
+                    </h6>
+                  </div>
+                  <div className="col-lg-12">
+                    <p className="mb-1 mt-4">Bank Details</p>
+                    <h6>
+                      {" "}
+                      Updated{" "}
+                      <ImAttachment
+                        className="ml-2"
+                        style={{ cursor: "pointer" }}
+                      />{" "}
+                    </h6>
                   </div>
                 </div>
               </div>

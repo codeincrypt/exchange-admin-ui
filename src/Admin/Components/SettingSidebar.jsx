@@ -14,7 +14,6 @@ import {
 
 const SettingSidebar = () => {
   const location = useLocation();
-  console.log("setting loc", location.pathname);
   
   return (
     <ListGroup className="card">

@@ -384,6 +384,12 @@ table > tbody > tr > td {
   border-radius: 8px 0px 0px 8px;
 }
 
+.sidebar-list-item.active {
+  background: #f3ba2f;
+  color: #111111;
+  border-radius: 8px 0px 0px 8px;
+}
+
 .dark-mode .sidebar-list-item:hover {
   background: #f3ba2f;
   color: #fff;
